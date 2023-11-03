@@ -23,9 +23,21 @@ import IMG24 from "./IMG_1131.jpeg";
 import IMG25 from "./IMG_1330.jpeg";
 import IMG26 from "./IMG_1334.jpeg";
 import IMG27 from "./IMG_1336.jpeg";
+import IMG28 from "./IMG_4105.jpg";
+import IMG29 from "./IMG_4106.jpg";
+import IMG30 from "./IMG_4107.jpg";
+import IMG31 from "./IMG_4109.jpg";
+import IMG32 from "./IMG_4110.jpg";
+import IMG33 from "./IMG_4112.jpg";
+import IMG34 from "./IMG_4113.jpg";
+import IMG35 from "./IMG_4114.jpg";
+import IMG36 from "./IMG_4115.jpg";
+import IMG37 from "./IMG_4116.jpg";
+import IMG38 from "./IMG_4117.jpg";
 
 //gif
 import GIF from "./Xysu.gif";
+import MP4Animations from "./diwali-lantern.json";
 export {
   IMG1,
   IMG2,
@@ -51,5 +63,17 @@ export {
   IMG25,
   IMG26,
   IMG27,
+  IMG28,
+  IMG29,
+  IMG30,
+  IMG31,
+  IMG32,
+  IMG33,
+  IMG34,
+  IMG35,
+  IMG36,
+  IMG37,
+  IMG38,
   GIF,
+  MP4Animations,
 };
