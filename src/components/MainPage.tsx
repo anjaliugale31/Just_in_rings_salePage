@@ -12,15 +12,19 @@ const MainPage = () => {
     const renderImage = () =>{
         return images.map((imageFile, index)=>(
             <div key={index} className="col-md-6 col-sm-6 col-lg-4 mb-2">
-                <div className="card" style={{ 
-                                        width: '100%',
-                                        height:'100%',
-                                        boxShadow:'0px 29px 52px 0px rgba(0,0,0,0.4)',
-                                        borderRadius:'35px',
-                                       }}>
-                    <img src={imageFile} className="card-img-top"  alt="Card_image_cap" style={{borderRadius:'35px', height:'100%'}} />
-                </div>
+                <div className="card animate__animated animate__backInLeft" style={{ 
+                    width: '100%',
+                    height:'100%',
+                    boxShadow:'0px 29px 52px 0px rgba(0,0,0,0.4)',
+                    borderRadius:'35px',
+                    }}>
+                    <img src={imageFile} className="card-img-top" alt={`Image_${index}`}
+                    style={{borderRadius:'35px', height:'100%'}} />
+          
+          </div>
+          
             </div>
+            
         ))
     }
   return (
@@ -28,6 +32,7 @@ const MainPage = () => {
         <div className='row'>
             <div className="col-lg-12">
                 <section 
+                className='animate__animated animate__backInRight'
                     style=
                     {{textAlign:'center',
                     marginTop:'30px',
@@ -36,6 +41,9 @@ const MainPage = () => {
                     }}>
                        💣 ᴅɪᴡᴀʟɪ ᴅʜᴀᴍᴀᴋᴀ: ɢᴇᴛ ᴍᴏʀᴇ, ꜱᴘᴇɴᴅ ʟᴇꜱꜱ – ᴀʟʟ ɪᴛᴇᴍꜱ ᴜɴᴅᴇʀ <b>₹199</b>💣
                     </section>
+                    <div className="icon-container">
+           
+                </div>
                 </div>
         </div>
         <div className="row justify-content-center mb-2">
