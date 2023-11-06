@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import {  MP4Animations } from '../images'
 import Lottie from 'lottie-react'
 import styled from 'styled-components';
 import images from '../elements/images';
+import CircularLoader from '../elements/CircularLoader';
 const MainPage = () => {
+    const [isLoading, setIsLoading] = useState(true)
     const renderImage = () =>{
         return images.map((imageFile, index)=>(
             <div key={index} className="col-md-4 col-sm-4 col-lg-4 col-xs-6 mb-2">
@@ -22,6 +24,11 @@ const MainPage = () => {
             </div>
         ))
     }
+    useEffect(() => {
+        setTimeout(() => {
+            setIsLoading(false);
+        }, 2000);
+    }, []);
   return (
     <MainComponet>
         <div className='container'>
@@ -63,9 +70,13 @@ const MainPage = () => {
                     />
                 </div>
             </div>
-            <div className="row justify-content-center mb-2">
-                    {renderImage()}
-            </div>
+            {isLoading ? (
+                    <CircularLoader />
+                ) : (
+                    <div className="row justify-content-center mb-2">
+                        {renderImage()}
+                    </div>
+                )}
         </div>
     </MainComponet>
   )
