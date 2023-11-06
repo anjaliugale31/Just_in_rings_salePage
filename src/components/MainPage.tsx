@@ -1,15 +1,12 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import {  MP4Animations } from '../images'
 import Lottie from 'lottie-react'
 import styled from 'styled-components';
 import images from '../elements/images';
-import CircularLoader from '../elements/CircularLoader';
 const MainPage = () => {
-    const [isLoading, setIsLoading] = useState(true)
     const renderImage = () =>{
         return images.map((imageFile, index)=>(
             <div key={index} className="col-md-4 col-sm-4 col-lg-4 col-xs-6 mb-2">
-                {isLoading? <CircularLoader/> :
                 <div className="card animate__animated animate__backInLeft animate__slideInUp" style={{ 
                     width: '100%',
                     height:'100%',
@@ -21,16 +18,11 @@ const MainPage = () => {
                     <div className='card-title text-center mt-2'>
                         Type:&nbsp;<strong>{imageFile.title}</strong>
                     </div>
-                </div>}
+                </div>
             </div>
 
         ))
     }
-    useEffect(() => {
-        setTimeout(() => {
-            setIsLoading(false);
-        }, 2000);
-    }, []);
   return (
     <MainComponet>
         <div className='container'>
