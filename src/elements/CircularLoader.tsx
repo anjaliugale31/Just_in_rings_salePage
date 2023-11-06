@@ -3,10 +3,11 @@ import { CircleLoader } from 'react-spinners'
 
 const CircularLoader = () => {
   return (
-    <div>
+    <div style={{display:'flex', alignItems:'center'}}>
         <CircleLoader 
-              size={10}
+              size={50}
             color="#d79136"
+            style={{textAlign: 'center'}}
         />
     </div>
   )

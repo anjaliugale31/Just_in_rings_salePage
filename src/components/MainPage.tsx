@@ -9,6 +9,7 @@ const MainPage = () => {
     const renderImage = () =>{
         return images.map((imageFile, index)=>(
             <div key={index} className="col-md-4 col-sm-4 col-lg-4 col-xs-6 mb-2">
+                {isLoading? <CircularLoader/> :
                 <div className="card animate__animated animate__backInLeft animate__slideInUp" style={{ 
                     width: '100%',
                     height:'100%',
@@ -20,8 +21,9 @@ const MainPage = () => {
                     <div className='card-title text-center mt-2'>
                         Type:&nbsp;<strong>{imageFile.title}</strong>
                     </div>
-                </div>
+                </div>}
             </div>
+
         ))
     }
     useEffect(() => {
@@ -70,13 +72,9 @@ const MainPage = () => {
                     />
                 </div>
             </div>
-            {isLoading ? (
-                    <CircularLoader />
-                ) : (
-                    <div className="row justify-content-center mb-2">
-                        {renderImage()}
-                    </div>
-                )}
+                <div className="row justify-content-center mb-2">
+                    {renderImage()}
+                </div>
         </div>
     </MainComponet>
   )
