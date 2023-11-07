@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, {  } from 'react'
 import {  MP4Animations } from '../images'
 import Lottie from 'lottie-react'
 import styled from 'styled-components';
